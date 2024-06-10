@@ -238,6 +238,7 @@ document.onclick = function (e) {
 function scroll(eles) {
   eles.forEach((ele) => {
     ele.addEventListener("click", (e) => {
+      e.preventDefault();
       let section = e.target.dataset.section;
       document.querySelector(section).scrollIntoView({ behavior: "smooth" });
     });
